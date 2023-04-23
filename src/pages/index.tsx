@@ -1,6 +1,7 @@
+/* eslint-disable react/no-unescaped-entities */
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import {
   AiFillGithub,
   AiFillLinkedin,
@@ -31,6 +32,11 @@ export default function Home() {
     setAge(age.toString());
   });
 
+  const ref = useRef<null | HTMLDivElement>(null);
+  const handleClick = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -50,12 +56,12 @@ export default function Home() {
                 />
               </li>
               <li>
-                <a
+                <button
                   className="bg-gradient-to-r from-purple-500 text- to-violet-500 text-white px-4 py-2 border-none rounded-md ml-8"
-                  href="#"
+                  onClick={handleClick}
                 >
                   Resumo
-                </a>
+                </button>
               </li>
             </ul>
           </nav>
@@ -73,9 +79,18 @@ export default function Home() {
             </p>
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-            <AiFillGithub />
-            <AiFillLinkedin />
-            <AiFillMediumCircle />
+            <a href="https://github.com/KsmKayk" target="_blank">
+              <AiFillGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/kaykmascarenhas/"
+              target="_blank"
+            >
+              <AiFillLinkedin />
+            </a>
+            <a href="https://medium.com/@kaykdsg" target="_blank">
+              <AiFillMediumCircle />
+            </a>
           </div>
           <div className="relative mx-auto bg-gradient-to-b from-violet-500 rounded-full w-80 h-80 mt-20 md:h-96 md:w-96">
             <Image src={me3d} layout="fill" objectFit="cover" alt="3d me" />
@@ -84,7 +99,9 @@ export default function Home() {
 
         <section>
           <div>
-            <h3 className="text-3xl py-1 dark:text-white">Sobre Mim</h3>
+            <h3 className="text-3xl py-1 dark:text-white" ref={ref}>
+              Sobre Mim
+            </h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               Tenho {age} anos, estudo programação desde os 13 anos de idade, no
               grande auge do Minecraft, tentando criar mods pro mesmo em{" "}
