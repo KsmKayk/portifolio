@@ -30,7 +30,7 @@ export default function Home() {
       age--;
     }
     setAge(age.toString());
-  });
+  }, [age]);
 
   const ref = useRef<null | HTMLDivElement>(null);
   const handleClick = () => {
