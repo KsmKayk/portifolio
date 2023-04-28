@@ -66,10 +66,10 @@ export default function Home() {
             </ul>
           </nav>
           <div className="text-center p-10">
-            <h2 className="text-4xl py-2 text-violet-600 font-medium md:text-6xl">
+            <h2 className="text-3xl py-2 text-violet-600 font-medium md:text-6xl">
               Kayk Mascarenhas
             </h2>
-            <h3 className="text-2xl py-2 md: text-3xl dark:text-white ">
+            <h3 className="text-xl py-2 md: text-3xl dark:text-white ">
               Desenvolvedor Fullstack
             </h3>
             <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-gray-200">
@@ -78,7 +78,7 @@ export default function Home() {
               Python
             </p>
           </div>
-          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
+          <div className="text-4xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
             <a href="https://github.com/KsmKayk" target="_blank">
               <AiFillGithub />
             </a>
@@ -92,7 +92,7 @@ export default function Home() {
               <AiFillMediumCircle />
             </a>
           </div>
-          <div className="relative mx-auto bg-gradient-to-b from-violet-500 rounded-full w-80 h-80 mt-20 md:h-96 md:w-96">
+          <div className="relative mx-auto bg-gradient-to-b from-violet-500 rounded-full w-70 h-70 mt-20 md:h-96 md:w-96">
             <Image src={me3d} layout="fill" objectFit="cover" alt="3d me" />
           </div>
         </section>
