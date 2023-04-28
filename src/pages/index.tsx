@@ -92,7 +92,7 @@ export default function Home() {
               <AiFillMediumCircle />
             </a>
           </div>
-          <div className="relative mx-auto bg-gradient-to-b from-violet-500 rounded-full w-70 h-70 mt-20 md:h-96 md:w-96">
+          <div className="relative mx-auto bg-gradient-to-b from-violet-500 rounded-full w-80 h-80 mt-20 md:h-96 md:w-96">
             <Image src={me3d} layout="fill" objectFit="cover" alt="3d me" />
           </div>
         </section>
